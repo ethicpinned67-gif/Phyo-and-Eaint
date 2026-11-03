@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --ivory: #faf7f2;
+  --champagne: #f5efeb;
+  --gold: #c5a059;
+  --ink: #292524;
+  --muted: #78716c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  margin: 0;
+  background: var(--ivory);
+  color: var(--ink);
+  font-family: Arial, "Noto Sans Myanmar", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #e8d9b8;
+  color: var(--ink);
+}
+
+.font-display {
+  font-family: "Cormorant Garamond", "Noto Serif Myanmar", Georgia, serif;
+}
+
+.section-kicker {
+  color: var(--gold);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.petal {
+  position: absolute;
+  top: -2rem;
+  width: 0.65rem;
+  height: 0.9rem;
+  border-radius: 100% 0 100% 0;
+  background: rgba(245, 220, 214, 0.7);
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% { transform: translate3d(0, -5vh, 0) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.8; }
+  90% { opacity: 0.65; }
+  100% { transform: translate3d(4rem, 110vh, 0) rotate(260deg); opacity: 0; }
+}
+
+.music-disc {
+  background: repeating-radial-gradient(circle, #4a4039 0 1px, #62574f 2px 3px);
+}
+
+.music-playing {
+  animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

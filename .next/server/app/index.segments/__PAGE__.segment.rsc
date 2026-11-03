@@ -1,0 +1,29 @@
+1:"$Sreact.fragment"
+2:"/_next/static/chunks/0aeuqh_o683xm.js"
+3:I[39756,["$2"],"default"]
+4:I[37457,["$2"],"default"]
+5:I[79280,["$2"],"default"]
+9:"/_next/static/chunks/12zq3ymh6t51p.js"
+a:I[92349,["$2","$9"],"default"]
+b:I[75316,["$2","$9"],"default"]
+c:I[60984,["$2","$9"],"default"]
+d:I[47604,["$2","$9"],"default"]
+e:I[16500,["$2","$9"],"default"]
+f:I[97367,["$2"],"OutletBoundary"]
+10:"$Sreact.suspense"
+13:"ViewportBoundary"
+14:I[97367,["$2"],"$13"]
+15:"MetadataBoundary"
+16:I[97367,["$2"],"$15"]
+:HL["/_next/static/chunks/0p85r0wis1_2a.css","style"]
+7:X
+8:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","main",null,{"children":[["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{}],["$","$Le",null,{}],["$","footer",null,{"className":"bg-[#292524] px-6 py-12 text-center text-[#FAF7F2]","children":[["$","p",null,{"className":"font-display text-3xl italic","children":["Phyo ",["$","span",null,{"className":"text-[#C5A059]","children":"&"}]," Eaint"]}],["$","p",null,{"className":"mt-3 text-[10px] tracking-[0.24em] text-white/55","children":"WITH LOVE, ALWAYS"}]]}]]}],[["$","script","script-0",{"src":"/_next/static/chunks/12zq3ymh6t51p.js","async":true}]],["$","$Lf",null,{"children":["$","$10",null,{"name":"Next.MetadataOutlet","children":"$@11"}]}]]}],"p":"$@12","v":null,"s":"$7"}}]]
+0:{"t":{"t":{"s":"","h":80,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/0p85r0wis1_2a.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/0aeuqh_o683xm.js","async":true}]],["$","html",null,{"lang":"en","children":["$","body",null,{"children":[["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}],"notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]]}],["$","$L5",null,{}]]}]}]]}],"p":"$@6","v":null,"s":"$7"},"c":"$Q8"},"h":{"r":["$","$1","h",{"children":[null,["$","$L14",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L16",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$10",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Phyo & Eaint | A wedding invitation"}],["$","meta","1",{"name":"description","content":"With love, we invite you to celebrate the beginning of our forever."}]]}]}],null]}],null]}],"p":"$@17","v":null,"s":"$7"}},"a":"$@18","u":"$@19","b":"mvpSsot45WiMsmdDKGSMi"}
+11:null
+7:300
+19:true
+7:C
+18:0
+6:"$undefined"
+17:"$undefined"
+12:"$undefined"
