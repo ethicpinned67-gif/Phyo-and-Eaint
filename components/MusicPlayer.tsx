@@ -1,46 +1,42 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useState } from "react";
 import { Volume2, VolumeX } from "lucide-react";
 
-interface MusicPlayerProps {
-  isPlaying: boolean;
-  setIsPlaying: (playing: boolean) => void;
-}
-
-export default function MusicPlayer({ isPlaying, setIsPlaying }: MusicPlayerProps) {
-  const audioRef = useRef<HTMLAudioElement | null>(null);
+export default function MusicPlayer() {
+  const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
-    if (!audioRef.current) return;
+    const audio = document.getElementById("bg-audio") as HTMLAudioElement | null;
+    if (!audio) return;
 
-    if (isPlaying) {
-      audioRef.current.play().catch((err) => {
-        console.log("Audio play blocked:", err);
-      });
-    } else {
-      audioRef.current.pause();
-    }
-  }, [isPlaying]);
+    const onPlay = () => setIsPlaying(true);
+    const onPause = () => setIsPlaying(false);
+
+    audio.addEventListener("play", onPlay);
+    audio.addEventListener("pause", onPause);
+
+    return () => {
+      audio.removeEventListener("play", onPlay);
+      audio.removeEventListener("pause", onPause);
+    };
+  }, []);
 
   const toggleMusic = () => {
-    if (!audioRef.current) return;
+    const audio = document.getElementById("bg-audio") as HTMLAudioElement | null;
+    if (!audio) return;
 
-    if (isPlaying) {
-      audioRef.current.pause();
-      setIsPlaying(false);
+    if (audio.paused) {
+      audio.play().catch((e) => console.log(e));
     } else {
-      audioRef.current
-        .play()
-        .then(() => setIsPlaying(true))
-        .catch((error) => console.log("Audio play error:", error));
+      audio.pause();
     }
   };
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3 rounded-full bg-white/90 px-4 py-2 shadow-lg backdrop-blur-md border border-stone-200">
-      {/* id="bg-audio" ထည့်ပေးထားပါသည် */}
-      <audio id="bg-audio" ref={audioRef} src="/music.mp3" loop preload="auto" />
+      <audio id="bg-audio" src="/music.mp3" loop preload="auto" playsInline />
+
       <span className="text-xs font-medium text-stone-700">
         {isPlaying ? "Playing our song" : "Tap to play our song"}
       </span>

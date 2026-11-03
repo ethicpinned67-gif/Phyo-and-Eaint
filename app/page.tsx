@@ -10,18 +10,9 @@ import InvitationCard from "@/components/InvitationCard";
 
 export default function WeddingPage() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
 
   const handleOpenInvitation = () => {
     setIsOpen(true);
-    setIsPlaying(true);
-
-    // Browser က direct user click အဖြစ် ချက်ချင်းသိစေရန် တိုက်ရိုက် play ခိုင်းခြင်း
-    const audio = document.getElementById("bg-audio") as HTMLAudioElement | null;
-    if (audio) {
-      audio.play().catch((e) => console.log("Direct play error:", e));
-    }
-
     setTimeout(() => {
       document.getElementById("main-content")?.scrollIntoView({ behavior: "smooth" });
     }, 100);
@@ -46,8 +37,7 @@ export default function WeddingPage() {
         )}
       </AnimatePresence>
 
-      {/* MusicPlayer ကို AnimatePresence အပြင်တွင် အမြဲ mount ထားပါ */}
-      <MusicPlayer isPlaying={isPlaying} setIsPlaying={setIsPlaying} />
+      <MusicPlayer />
     </main>
   );
 }
