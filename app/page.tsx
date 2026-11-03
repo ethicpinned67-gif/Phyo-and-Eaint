@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Hero from "@/components/Hero";
-import Timeline from "@/components/Timeline";
 import Venue from "@/components/Venue";
 import Gallery from "@/components/Gallery";
 import MusicPlayer from "@/components/MusicPlayer";
@@ -33,8 +32,6 @@ export default function WeddingPage() {
           >
             {/* ဖိတ်စာ ကတ်ပြားကို Timeline မတိုင်မီ ပြသထားပါသည် */}
             <InvitationCard />
-
-            <Timeline />
             <Venue />
             <Gallery />
 
