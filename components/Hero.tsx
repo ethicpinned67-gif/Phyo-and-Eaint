@@ -32,10 +32,15 @@ export default function Hero({ onOpenInvitation, isOpen }: HeroProps) {
       colors: ["#D4AF37", "#F5EFEB", "#E6B9B2", "#FFFFFF"],
     });
 
-    // ခလုတ်နှိပ်သည့် Click Event တွင် အသံကို တိုက်ရိုက် စတင်ဖွင့်စေခြင်း
-    const audio = document.getElementById("bg-audio") as HTMLAudioElement | null;
-    if (audio) {
-      audio.play().catch((err) => console.log("Play error:", err));
+    try {
+      const audio = new Audio("/music.mp3");
+      audio.loop = true;
+      audio.play().catch((err) => {
+        console.error("Playback failed:", err);
+      });
+      (window as any).bgAudio = audio;
+    } catch (e) {
+      console.error(e);
     }
 
     if (onOpenInvitation) {
