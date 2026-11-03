@@ -7,6 +7,7 @@ import Timeline from "@/components/Timeline";
 import Venue from "@/components/Venue";
 import Gallery from "@/components/Gallery";
 import MusicPlayer from "@/components/MusicPlayer";
+import InvitationCard from "@/components/InvitationCard"; // 👈 ဒီနေရာမှာ import ထည့်ပါ
 
 export default function WeddingPage() {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,6 +31,9 @@ export default function WeddingPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
+            {/* ဖိတ်စာ ကတ်ပြားကို Timeline မတိုင်မီ ပြသထားပါသည် */}
+            <InvitationCard />
+
             <Timeline />
             <Venue />
             <Gallery />
