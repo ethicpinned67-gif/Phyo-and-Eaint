@@ -32,11 +32,17 @@ export default function Hero({ onOpenInvitation, isOpen }: HeroProps) {
       colors: ["#D4AF37", "#F5EFEB", "#E6B9B2", "#FFFFFF"],
     });
 
+    // ခလုတ်နှိပ်သည့် Click Event တွင် အသံကို တိုက်ရိုက် စတင်ဖွင့်စေခြင်း
+    const audio = document.getElementById("bg-audio") as HTMLAudioElement | null;
+    if (audio) {
+      audio.play().catch((err) => console.log("Play error:", err));
+    }
+
     if (onOpenInvitation) {
       onOpenInvitation();
     }
 
-    document.getElementById("story")?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("main-content")?.scrollIntoView({ behavior: "smooth" });
   }
 
   return (
