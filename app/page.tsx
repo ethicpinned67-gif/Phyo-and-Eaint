@@ -6,13 +6,16 @@ import Hero from "@/components/Hero";
 import Venue from "@/components/Venue";
 import Gallery from "@/components/Gallery";
 import MusicPlayer from "@/components/MusicPlayer";
-import InvitationCard from "@/components/InvitationCard"; // 👈 ဒီနေရာမှာ import ထည့်ပါ
+import InvitationCard from "@/components/InvitationCard";
 
 export default function WeddingPage() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false); // 👈 သီချင်း အခြေအနေ
 
   const handleOpenInvitation = () => {
     setIsOpen(true);
+    setIsPlaying(true); // 👈 ဖိတ်စာဖွင့်သည်နှင့် သီချင်း auto စတင်ဖွင့်မည်
+
     setTimeout(() => {
       document.getElementById("main-content")?.scrollIntoView({ behavior: "smooth" });
     }, 100);
@@ -30,12 +33,12 @@ export default function WeddingPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            {/* ဖိတ်စာ ကတ်ပြားကို Timeline မတိုင်မီ ပြသထားပါသည် */}
             <InvitationCard />
             <Venue />
             <Gallery />
 
-            <MusicPlayer />
+            {/* Music Player ထံသို့ state များ ပေးပို့ပါ */}
+            <MusicPlayer isPlaying={isPlaying} setIsPlaying={setIsPlaying} />
           </motion.div>
         )}
       </AnimatePresence>
