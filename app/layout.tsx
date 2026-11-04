@@ -1,19 +1,29 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import MusicPlayer from "@/components/MusicPlayer";
 
 export const metadata: Metadata = {
-  title: "Phyo & Eaint | A wedding invitation",
-  description: "With love, we invite you to celebrate the beginning of our forever.",
+  metadataBase: new URL("https://phyo-and-eaint.vercel.app"),
+  title: "Phyo & Eaint - Wedding Invitation",
+  description: "We invite you to celebrate our wedding with us!",
+  openGraph: {
+    title: "Phyo & Eaint - Wedding Invitation",
+    description: "We invite you to celebrate our wedding with us!",
+    url: "https://phyo-and-eaint.vercel.app",
+    siteName: "Phyo & Eaint Wedding",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Wedding Invitation",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Phyo & Eaint - Wedding Invitation",
+    description: "We invite you to celebrate our wedding with us!",
+    images: ["/og-image.jpg"],
+  },
 };
-
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return (
-    <html lang="en">
-      <body>
-        {children}
-        <MusicPlayer />
-      </body>
-    </html>
-  );
-}
