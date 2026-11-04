@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://phyo-and-eaint.vercel.app"),
@@ -27,3 +28,16 @@ export const metadata: Metadata = {
     images: ["/og-image.jpg"],
   },
 };
+
+// 👈 အောက်ပါ default export function ပျောက်နေ၍ Error တက်နေခြင်း ဖြစ်ပါသည်
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body className="antialiased selection:bg-amber-100">{children}</body>
+    </html>
+  );
+}
