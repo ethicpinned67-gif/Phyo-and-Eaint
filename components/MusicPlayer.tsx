@@ -1,41 +1,42 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Volume2, VolumeX } from "lucide-react";
 
 export default function MusicPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    const audio = document.getElementById("bg-audio") as HTMLAudioElement | null;
+    const audio = audioRef.current;
     if (!audio) return;
 
-    const onPlay = () => setIsPlaying(true);
-    const onPause = () => setIsPlaying(false);
+    const handlePlay = () => setIsPlaying(true);
+    const handlePause = () => setIsPlaying(false);
 
-    audio.addEventListener("play", onPlay);
-    audio.addEventListener("pause", onPause);
+    audio.addEventListener("play", handlePlay);
+    audio.addEventListener("pause", handlePause);
 
     return () => {
-      audio.removeEventListener("play", onPlay);
-      audio.removeEventListener("pause", onPause);
+      audio.removeEventListener("play", handlePlay);
+      audio.removeEventListener("pause", handlePause);
     };
   }, []);
 
   const toggleMusic = () => {
-    const audio = document.getElementById("bg-audio") as HTMLAudioElement | null;
+    const audio = audioRef.current;
     if (!audio) return;
 
-    if (audio.paused) {
-      audio.play().catch((e) => console.log(e));
-    } else {
+    if (!audio.paused) {
       audio.pause();
+    } else {
+      audio.play().catch((err) => console.log("Audio play error:", err));
     }
   };
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3 rounded-full bg-white/90 px-4 py-2 shadow-lg backdrop-blur-md border border-stone-200">
-      <audio id="bg-audio" src="/music.mp3" loop preload="auto" playsInline />
+      <audio id="bg-audio" ref={audioRef} src="/music.mp3" loop preload="auto" playsInline />
 
       <span className="text-xs font-medium text-stone-700">
         {isPlaying ? "Playing our song" : "Tap to play our song"}

@@ -24,7 +24,7 @@ export default function Hero({ onOpenInvitation, isOpen }: HeroProps) {
     []
   );
 
-  function celebrate() {
+function celebrate() {
     confetti({
       particleCount: 90,
       spread: 65,
@@ -32,15 +32,10 @@ export default function Hero({ onOpenInvitation, isOpen }: HeroProps) {
       colors: ["#D4AF37", "#F5EFEB", "#E6B9B2", "#FFFFFF"],
     });
 
-    try {
-      const audio = new Audio("/music.mp3");
-      audio.loop = true;
-      audio.play().catch((err) => {
-        console.error("Playback failed:", err);
-      });
-      (window as any).bgAudio = audio;
-    } catch (e) {
-      console.error(e);
+    // 👈 new Audio အစား bg-audio element ကို တိုက်ရိုက် play ခိုင်းပါ
+    const audio = document.getElementById("bg-audio") as HTMLAudioElement | null;
+    if (audio) {
+      audio.play().catch((err) => console.log("Play error:", err));
     }
 
     if (onOpenInvitation) {
