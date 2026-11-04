@@ -7,6 +7,7 @@ import Venue from "@/components/Venue";
 import Gallery from "@/components/Gallery";
 import MusicPlayer from "@/components/MusicPlayer";
 import InvitationCard from "@/components/InvitationCard";
+import LoveNote from "@/components/LoveNote"; // အပေါ်မှာ import လုပ်ပါ
 
 export default function WeddingPage() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,6 +34,7 @@ export default function WeddingPage() {
             <InvitationCard />
             <Venue />
             <Gallery />
+            <LoveNote /> {/* 👈 ဒီနေရာမှာ ထည့်ပေးလိုက်ပါ */}
           </motion.div>
         )}
       </AnimatePresence>
