@@ -32,9 +32,10 @@ function celebrate() {
       colors: ["#D4AF37", "#F5EFEB", "#E6B9B2", "#FFFFFF"],
     });
 
-    // 👈 bg-audio ID ရှိသော audio တစ်ခုတည်းကိုသာ ဖွင့်ခိုင်းပါ
     const audio = document.getElementById("bg-audio") as HTMLAudioElement | null;
     if (audio) {
+      // 👈 Intro ကျော်ရန် ဤနေရာတွင် စက္ကန့်သတ်မှတ်ပါ (ဥပမာ ၁၅ စက္ကန့်မှ စဖွင့်ရန်)
+      audio.currentTime = 15; 
       audio.play().catch((err) => console.log("Play error:", err));
     }
 
