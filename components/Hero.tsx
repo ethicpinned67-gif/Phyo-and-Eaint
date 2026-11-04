@@ -32,7 +32,7 @@ function celebrate() {
       colors: ["#D4AF37", "#F5EFEB", "#E6B9B2", "#FFFFFF"],
     });
 
-    // 👈 new Audio အစား bg-audio element ကို တိုက်ရိုက် play ခိုင်းပါ
+    // 👈 bg-audio ID ရှိသော audio တစ်ခုတည်းကိုသာ ဖွင့်ခိုင်းပါ
     const audio = document.getElementById("bg-audio") as HTMLAudioElement | null;
     if (audio) {
       audio.play().catch((err) => console.log("Play error:", err));

@@ -1,14 +1,13 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { Volume2, VolumeX } from "lucide-react";
 
 export default function MusicPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    const audio = audioRef.current;
+    const audio = document.getElementById("bg-audio") as HTMLAudioElement | null;
     if (!audio) return;
 
     const handlePlay = () => setIsPlaying(true);
@@ -24,19 +23,20 @@ export default function MusicPlayer() {
   }, []);
 
   const toggleMusic = () => {
-    const audio = audioRef.current;
+    const audio = document.getElementById("bg-audio") as HTMLAudioElement | null;
     if (!audio) return;
 
-    if (!audio.paused) {
-      audio.pause();
+    if (audio.paused) {
+      audio.play().catch((err) => console.log(err));
     } else {
-      audio.play().catch((err) => console.log("Audio play error:", err));
+      audio.pause();
     }
   };
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3 rounded-full bg-white/90 px-4 py-2 shadow-lg backdrop-blur-md border border-stone-200">
-      <audio id="bg-audio" ref={audioRef} src="/music.mp3" loop preload="auto" playsInline />
+      {/* တစ်ခုတည်းသော audio element */}
+      <audio id="bg-audio" src="/music.mp3" loop preload="auto" playsInline />
 
       <span className="text-xs font-medium text-stone-700">
         {isPlaying ? "Playing our song" : "Tap to play our song"}
