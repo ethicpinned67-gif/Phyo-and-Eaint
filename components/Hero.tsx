@@ -34,8 +34,7 @@ function celebrate() {
 
     const audio = document.getElementById("bg-audio") as HTMLAudioElement | null;
     if (audio) {
-      // 👈 Intro ကျော်ရန် ဤနေရာတွင် စက္ကန့်သတ်မှတ်ပါ (ဥပမာ ၁၅ စက္ကန့်မှ စဖွင့်ရန်)
-      audio.currentTime = 15; 
+      // 👈 Intro ကျော်ရန် ဤနေရာတွင် စက္ကန့်သတ်မှတ်ပါ (ဥပမာ ၁၅ စက္ကန့်မှ စဖွင့်ရန်) 
       audio.play().catch((err) => console.log("Play error:", err));
     }
 
