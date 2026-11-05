@@ -71,9 +71,7 @@ self.__SERVER_FILES_MANIFEST={
       "unoptimized": false,
       "customCacheHandler": false
     },
-    "devIndicators": {
-      "position": "bottom-left"
-    },
+    "devIndicators": false,
     "onDemandEntries": {
       "maxInactiveAge": 60000,
       "pagesBufferLength": 5
@@ -85,7 +83,7 @@ self.__SERVER_FILES_MANIFEST={
     "productionBrowserSourceMaps": false,
     "excludeDefaultMomentLocales": true,
     "reactProductionProfiling": false,
-    "reactStrictMode": true,
+    "reactStrictMode": null,
     "reactMaxHeadersLength": 6000,
     "httpAgentOptions": {
       "keepAlive": true
@@ -105,7 +103,7 @@ self.__SERVER_FILES_MANIFEST={
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "C:\\Users\\Lenovo\\Documents\\Phyo & Eaint",
+    "outputFileTracingRoot": "C:\\Users\\Lenovo\\Documents\\Phyo-and-Eaint",
     "enablePrerenderSourceMaps": true,
     "cacheComponents": false,
     "cacheLife": {
@@ -334,13 +332,13 @@ self.__SERVER_FILES_MANIFEST={
     "htmlLimitedBots": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.mjs",
-    "repoRoot": "C:\\Users\\Lenovo\\Documents\\Phyo & Eaint",
+    "repoRoot": "C:\\Users\\Lenovo\\Documents\\Phyo-and-Eaint",
     "turbopack": {
-      "root": "C:\\Users\\Lenovo\\Documents\\Phyo & Eaint"
+      "root": "C:\\Users\\Lenovo\\Documents\\Phyo-and-Eaint"
     },
     "distDirRoot": ".next"
   },
-  "appDir": "C:\\Users\\Lenovo\\Documents\\Phyo & Eaint",
+  "appDir": "C:\\Users\\Lenovo\\Documents\\Phyo-and-Eaint",
   "relativeAppDir": "",
   "files": [
     ".next\\package.json",
