@@ -106,7 +106,7 @@ export default function Venue() {
             </h3>
             <div className="mt-5 rounded-xl bg-white p-3 shadow-inner border border-stone-100">
               <Image
-                src="/qr-gift.png"
+                src="/kpay-qr.png"
                 alt="KPay Gift QR Code"
                 width={170}
                 height={170}
