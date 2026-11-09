@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowUpRight, MapPin } from "lucide-react";
 
@@ -12,6 +13,7 @@ const embedUrl = `https://maps.google.com/maps?q=${mapQuery}&t=&z=15&ie=UTF8&iwl
 export default function Venue() {
   return (
     <section id="venue" className="bg-[#F1EAE3] px-5 py-24 sm:px-8 sm:py-28">
+      {/* Location Details & Map */}
       <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-[0.8fr_1.2fr] md:gap-16">
         <motion.div
           initial={{ opacity: 0, x: -18 }}
@@ -61,6 +63,63 @@ export default function Venue() {
           />
         </motion.div>
       </div>
+
+      {/* RSVP and KPay QR Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, delay: 0.2 }}
+        className="mx-auto mt-16 max-w-4xl border-t border-[#dfd4c8] pt-12 sm:mt-20 sm:pt-16"
+      >
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-10">
+          
+          {/* RSVP Card */}
+          <div className="flex flex-col items-center rounded-2xl bg-[#faf7f2] p-8 text-center shadow-sm border border-[#e8dfd5] transition-transform hover:-translate-y-1 duration-300">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#B08C4A]">
+              Attendance Confirmation
+            </span>
+            <h3 className="font-display mt-2 text-2xl font-light text-stone-800">
+              RSVP
+            </h3>
+            <div className="mt-5 rounded-xl bg-white p-3 shadow-inner border border-stone-100">
+              <Image
+                src="/qr-rsvp.png"
+                alt="RSVP QR Code"
+                width={170}
+                height={170}
+                className="h-40 w-40 object-contain sm:h-44 sm:w-44"
+              />
+            </div>
+            <p className="mt-4 text-xs tracking-wide text-stone-500">
+              Scan to confirm attendance
+            </p>
+          </div>
+
+          {/* KPay Card */}
+          <div className="flex flex-col items-center rounded-2xl bg-[#faf7f2] p-8 text-center shadow-sm border border-[#e8dfd5] transition-transform hover:-translate-y-1 duration-300">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#B08C4A]">
+              Wedding Gift
+            </span>
+            <h3 className="font-display mt-2 text-2xl font-light text-stone-800">
+              KPay / WavePay
+            </h3>
+            <div className="mt-5 rounded-xl bg-white p-3 shadow-inner border border-stone-100">
+              <Image
+                src="/qr-gift.png"
+                alt="KPay Gift QR Code"
+                width={170}
+                height={170}
+                className="h-40 w-40 object-contain sm:h-44 sm:w-44"
+              />
+            </div>
+            <p className="mt-4 text-xs tracking-wide text-stone-500">
+              Scan to send wedding gift
+            </p>
+          </div>
+
+        </div>
+      </motion.div>
     </section>
   );
 }
