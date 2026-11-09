@@ -87,7 +87,7 @@ export default function Venue() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch max-w-3xl mx-auto">
           
           {/* RSVP Card */}
-          <div className="flex flex-col items-center justify-between rounded-2xl bg-[#FCFAF6] p-7 text-center shadow-md border border-[#E3D9CD] transition-all hover:shadow-lg hover:-translate-y-1">
+          <div className="flex flex-col items-center justify-between rounded-2xl bg-[#FCFAF6] p-7 text-center shadow-md border border-[#E3D9CD] transition-all hover:shadow-lg">
             <div className="w-full">
               <div className="flex items-center justify-center gap-2 text-[#B08C4A] mb-2">
                 <Heart size={16} className="fill-[#B08C4A]/20" />
@@ -101,47 +101,47 @@ export default function Venue() {
               </p>
             </div>
 
-            <div className="my-6 p-3 bg-white rounded-xl shadow-sm border border-stone-200">
+            <div className="my-6 p-3 bg-white rounded-xl shadow-sm border border-stone-200 flex items-center justify-center min-h-[260px] w-full max-w-[240px]">
               <Image
                 src="/qr-rsvp.png"
                 alt="RSVP QR Code"
-                width={200}
-                height={200}
+                width={180}
+                height={180}
                 className="w-44 h-44 object-contain rounded-lg"
               />
             </div>
 
-            <span className="text-xs text-stone-500 bg-[#F1EAE3] px-4 py-1.5 rounded-full font-medium">
-              Phone camera ဖြင့် Scan ဖတ်ပေးပါရန်
+            <span className="text-xs text-stone-600 bg-[#F1EAE3] px-4 py-2 rounded-full font-medium">
+              ဖုန်းကင်မရာဖြင့် Scan ဖတ်နိုင်ပါသည်
             </span>
           </div>
 
           {/* KPay Card */}
-          <div className="flex flex-col items-center justify-between rounded-2xl bg-[#FCFAF6] p-7 text-center shadow-md border border-[#E3D9CD] transition-all hover:shadow-lg hover:-translate-y-1">
+          <div className="flex flex-col items-center justify-between rounded-2xl bg-[#FCFAF6] p-7 text-center shadow-md border border-[#E3D9CD] transition-all hover:shadow-lg">
             <div className="w-full">
               <div className="flex items-center justify-center gap-2 text-[#005BAC] mb-2">
                 <Gift size={16} />
                 <span className="text-[11px] font-bold tracking-[0.18em] uppercase">KBZPay</span>
               </div>
               <h4 className="font-semibold text-lg text-stone-800">
-                မင်္ဂလာလက်ဖွဲ့ ရန်
+                မင်္ဂလာလက်ဖွဲ့
               </h4>
               <p className="text-xs text-stone-500 mt-1">
                 MA EAINT SHWE PHYU (KBZPay)
               </p>
             </div>
 
-            <div className="my-6 p-2 bg-white rounded-xl shadow-sm border border-stone-200 overflow-hidden">
+            <div className="my-6 p-2 bg-white rounded-xl shadow-sm border border-stone-200 flex items-center justify-center min-h-[260px] w-full max-w-[240px]">
               <Image
                 src="/kpay-qr.png"
                 alt="KBZPay QR Code"
-                width={220}
-                height={330}
-                className="w-48 h-auto max-h-64 object-contain rounded-lg"
+                width={200}
+                height={300}
+                className="w-44 h-auto max-h-[250px] object-contain rounded-lg"
               />
             </div>
 
-            <span className="text-xs text-[#005BAC] bg-blue-50 px-4 py-1.5 rounded-full font-medium">
+            <span className="text-xs text-[#005BAC] bg-blue-50 px-4 py-2 rounded-full font-medium">
               မင်္ဂလာလက်ဖွဲ့ မေတ္တာလက်ဆောင် ပေးပို့ရန်
             </span>
           </div>
