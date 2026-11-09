@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function InvitationCard() {
   return (
     <section className="flex justify-center items-center py-12 px-4 bg-[#fdfbf7]">
@@ -95,39 +93,6 @@ export default function InvitationCard() {
             <p className="text-xs text-neutral-600 mt-0.5">
               No.37, Kabar Aye Pagoda Road, Yangon
             </p>
-          </div>
-        </div>
-
-        {/* QR Code Section */}
-        <div className="grid grid-cols-2 gap-6 mt-8 pt-6 border-t border-dashed border-neutral-300">
-          <div className="flex flex-col items-center">
-            <div className="p-2 bg-white border border-neutral-300 rounded shadow-sm">
-              <Image 
-                src="/qr-rsvp.png" 
-                alt="RSVP QR Code" 
-                width={120} 
-                height={120} 
-                className="w-24 h-24 sm:w-28 sm:h-28 object-contain"
-              />
-            </div>
-            <span className="text-xs sm:text-sm font-bold mt-2 text-neutral-800 tracking-wider">
-              RSVP
-            </span>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <div className="p-2 bg-white border border-neutral-300 rounded shadow-sm">
-              <Image 
-                src="/qr-gift.png" 
-                alt="Gift QR Code" 
-                width={120} 
-                height={120} 
-                className="w-24 h-24 sm:w-28 sm:h-28 object-contain"
-              />
-            </div>
-            <span className="text-xs sm:text-sm font-bold mt-2 text-neutral-800 tracking-wider">
-              Gift
-            </span>
           </div>
         </div>
 
