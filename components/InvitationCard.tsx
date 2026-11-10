@@ -41,7 +41,7 @@ export default function InvitationCard() {
             ဦးအောင်ကျော်မိုး + ဒေါ်ဧကရီခိုင် (ဧကရာဇ်ကုမ္ပဏီ - Hena Export Shop) တို့၏ညီမ၊
           </p>
           <p className="text-xs sm:text-sm text-neutral-600">
-            ဦးစန်းရွှေ + ဒေါ်တင်တင်ဌေး၊ (အားမာန်အုတ်သဲကျောက်ရောင်းဝယ်ရေး)၊ ဦးအောင်မဉ္ဇူ၊
+            ဦးစန်းရွှေ + ဒေါ်တင်တင်ဌေး၊ ("အားမာန်" အုတ်၊သဲ၊ကျောက် ရောင်းဝယ်ရေး)၊ ဦးအောင်မဉ္ဇူ၊
           </p>
           <p className="text-xs sm:text-sm text-neutral-600">
             ဦးအောင်ကျော်လင်း (SRS Shipping Co., Ltd) + ဒေါ်ဇင်ဇင်မြင့် (လ.ဝ.က-ငြိမ်း) တို့၏တူမ
