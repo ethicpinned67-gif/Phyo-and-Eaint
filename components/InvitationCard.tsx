@@ -21,7 +21,7 @@ export default function InvitationCard() {
           <p className="font-semibold text-neutral-900">(ဦးအောင်ချစ်) + (ဒေါ်ဖွား)၊</p>
           <p className="font-semibold text-neutral-900">(ဦးဖိုးထွေး) + (ဒေါ်ထွေးခင်) တို့၏မြေး</p>
           <p className="text-xs sm:text-sm text-neutral-600">ဟုမ္မလင်းခရိုင်၊ နမ့်တောမြို့နေ</p>
-          <p>(ဦးဝေလီ) + ဒေါ်မို့တင် (အောင်ကျော်ဇင်(၂)စတိုး) တို့၏သား</p>
+          <p>(ဦးဝေလီ) + ဒေါ်မှဲ့တင် (အောင်ကျော်ဇင်(၂)စတိုး) တို့၏သား</p>
           <p className="text-xs sm:text-sm text-neutral-600">
             မစိမ်းလဲဝါ (Nay Amara Hlaing Floral & surprise boxes service) ၏အစ်ကို
           </p>
@@ -41,7 +41,7 @@ export default function InvitationCard() {
             ဦးအောင်ကျော်မိုး + ဒေါ်ဧကရီခိုင် (ဧကရာဇ်ကုမ္ပဏီ - Hena Export Shop) တို့၏ညီမ၊
           </p>
           <p className="text-xs sm:text-sm text-neutral-600">
-            ဦးစန်းရွှေ + ဒေါ်တင်တင်ဌေး၊ (အာမဟန် အုတ်သဲကျောက်ရောင်းဝယ်ရေး)၊ ဦးအောင်မဉ္ဇူ၊
+            ဦးစန်းရွှေ + ဒေါ်တင်တင်ဌေး၊ (အားမာန်အုတ်သဲကျောက်ရောင်းဝယ်ရေး)၊ ဦးအောင်မဉ္ဇူ၊
           </p>
           <p className="text-xs sm:text-sm text-neutral-600">
             ဦးအောင်ကျော်လင်း (SRS Shipping Co., Ltd) + ဒေါ်ဇင်ဇင်မြင့် (လ.ဝ.က-ငြိမ်း) တို့၏တူမ
