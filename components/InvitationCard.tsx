@@ -23,7 +23,7 @@ export default function InvitationCard() {
           <p className="text-xs sm:text-sm text-neutral-600">ဟုမ္မလင်းခရိုင်၊ နမ့်တောမြို့နေ</p>
           <p>(ဦးဝေလီ) + ဒေါ်မှဲ့တင် (အောင်ကျော်ဇင်(၂)စတိုး) တို့၏သား</p>
           <p className="text-xs sm:text-sm text-neutral-600">
-            မစိမ်းလဲဝါ (Nay Amara Hlaing Floral & surprise boxes service) ၏အစ်ကို
+            မစိမ်းလဲ့ဝါ (Nay Amara Hlaing Floral & surprise boxes service) ၏အစ်ကို
           </p>
           <h3 className="text-2xl font-bold py-2 text-neutral-900 tracking-wider">
             မောင်ဖြိုးသက်ထွန်း
