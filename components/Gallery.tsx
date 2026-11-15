@@ -8,6 +8,7 @@ const photos = [
   { src: "/gallery-1.jpg", alt: "Wedding Memory 1" },
   { src: "/gallery-2.jpg", alt: "Wedding Memory 2" },
   { src: "/gallery-3.jpg", alt: "Wedding Memory 3" },
+  { src: "/gallery-4.jpg", alt: "Wedding Memory 4" },
 
 ];
 
